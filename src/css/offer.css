@@ -1,0 +1,115 @@
+.offer
+{
+	padding: 0px 0px 0px 0px;
+	position: relative;
+    width: 100%;
+    height: auto;
+}
+.offer .container
+{
+	display: flex;
+	justify-content: space-between;
+    width: 100%;
+    height: auto;
+}
+.offer__text
+{
+	width: 70vw;
+    font-size: 2vw;
+}
+.offer__descr
+{
+	font-size: 2vw;
+	line-height: 1;
+	margin-top: 30px;
+    width: 70vw;
+}
+.offer__action
+{
+	align-items: center;
+	display: flex;
+	justify-content: flex-end;
+    padding: 10px;
+}
+.offer__advantages
+{
+	margin-top: 20px;
+	width: 50%;
+    height: auto;
+}
+
+.offer__advantages h2
+{
+	font-size: 2vw;
+	margin-top: 10px;
+}
+.offer__advantages-text
+{
+	font-size: 1.5vw;
+	line-height: 1;
+	margin-top: 20px;
+}
+
+
+.offer__slider
+{
+	/* align-items: flex-end; */
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+    height:auto
+}
+.offer__slider-counter
+{
+	/* align-items: center; */
+	color: rgba(0,0,0,.5);
+	display: flex;
+	font-size: 2vw;
+    justify-content: center;
+    height: auto;
+}
+.offer__slider-wrapper
+{
+	margin-top: 15px;
+	width: 100%;
+    height: auto;
+	background-color: inherit;
+}
+.offer__slider-prev
+{
+	cursor: pointer;
+	margin-right: 10px;
+}
+.offer__slider-prev img{
+    height: 15px;
+    object-fit: contain;
+}
+.offer__slider-next
+{
+	cursor: pointer;
+	margin-left: 10px;
+    justify-content: right;
+}
+.offer__slider-next img{
+    height: 15px;
+    object-fit: contain;
+}
+.offer__slider #current
+{
+	color: #000;
+	font-size: 2vw;
+	font-weight: 700;
+}
+.offer__slide
+{
+	width: 100%;
+    height: auto;
+}
+.offer__slide img
+{
+    
+	object-fit: contain;
+	width: 100%;
+	height: auto;
+    max-height: 275px;
+}

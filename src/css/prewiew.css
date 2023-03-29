@@ -1,0 +1,75 @@
+.preview
+{
+	padding: 20px 0 20px 0;
+	position: relative;
+}
+
+.tabcontainer
+{
+	box-shadow: 0 4px 30px rgba(0,0,0,.25);
+	display: flex;
+	margin: 10px auto;
+	width: 70%;
+    height: auto;
+}
+.tabcontent
+{
+	/* position: relative; */
+	width: 50%;
+    height: auto;
+}
+.tabcontent img
+{
+	height: auto;
+	object-fit: contain;
+	width: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+	transition: 1s all;
+	max-height: 400px;
+}
+.tabcontent__descr
+{
+	background: rgba(251,254,93,.8);
+	color: rgba(0,0,0,.7);
+	font-size: 2vw;
+    line-height: 1;
+    height: auto;
+    width: auto;
+    position:initial;
+    padding: 0px 0px;
+    margin: 0px 0px;
+
+}
+.tabheader
+{
+	background-color: #fff;
+	width: 50%;
+}
+.tabheader h3
+{
+    text-align: center;
+	font-size: 2vw;
+}
+.tabheader__items
+{
+	margin-top: 10px;
+	padding-left: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.tabheader__item
+{
+	color: rgba(0,0,0,.6);
+	cursor: pointer;
+	font-size: 1.5vw;
+	margin-top: 10px;
+	transition: 0.5s all;
+	text-align: center;
+}
+.tabheader__item_active
+{
+	color: #000;
+	font-size: 2vw;
+	font-weight: 700;
+}

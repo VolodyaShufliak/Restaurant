@@ -1,0 +1,42 @@
+.header
+{
+	align-items: center;
+	display: flex;
+	/* height: 150px; */
+	justify-content: space-between;
+    padding: 0px 5px;
+    font-size: 2vw;
+    margin-top: 10px;
+}
+.header__left-block
+{
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+}
+.header__logo
+{
+	width: 50%;
+}
+
+.header__links
+{
+	align-items: center;
+	display: flex;
+    justify-content: space-between;
+    width: 33vw;
+}
+.header__link
+{
+	color: #303030;
+	font-size: 2vw;
+	/* margin-right: 45px; */
+	position: relative;
+}
+
+.header__link:last-child
+{
+	margin-right: 0;
+    /* width: 33vw;
+    font-size: 2vw; */
+}
