@@ -2,22 +2,22 @@ window.addEventListener('DOMContentLoaded',()=>{
     const menu = [
         {
             name:'ДаблЧізбургер Меню',
-            src:'img/slider/doublecheesemenu.jpg',
+            src:'img/menu_photo/doublecheesemenu.jpg',
             description:'Два біфштекси з натуральної яловичини, два шматочки сиру “Чеддер”, цибуля, гірчиця, кетчуп, булочка.'
         },
         {
             name:'БігМак Меню',
-            src:'img/slider/bigmacmenu.jpg',
+            src:'img/menu_photo/bigmacmenu.jpg',
             description:'Два біфштекси з натуральної яловичини, цибуля, маринований огірок, сир “Чеддер”, свіжий салат, заправлені спеціальним соусом, у булочці з насінням сезаму.'
         },
         {
             name:'МакНагетс Меню',
-            src:'img/slider/nagetsmenu.jpg',
+            src:'img/menu_photo/nagetsmenu.jpg',
             description:'Апетитні шматочки ніжного курячого філе, засмажені у хрумкій паніровці.'
         },
         {
             name:'БігтейстіМеню',
-            src:'img/slider/bigtastymenu.jpg',
+            src:'img/menu_photo/bigtastymenu.jpg',
             description:'Натуральна яловичина у поєднанні зі свіжими овочами та плавленим сиром “Емменталь”.'
         }
     ]
