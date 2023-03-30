@@ -1,14 +1,13 @@
 window.addEventListener('DOMContentLoaded',()=>{
     let menu=[];
-    async function  getData(url,method = 'GET',body = null,headers = {'Content-Type':'application/json'}){
+    async function  httpReq(url,method = 'GET',body = null,headers = {'Content-Type':'application/json'}){
         let response= await fetch(url,{method,body,headers});
         const data =await response.json();
         return data;
     }
-     getData('http://localhost:3000/menu')
+     httpReq('http://localhost:3000/menu')
         .then(res=>menu=[...res])
         .finally(()=>{
-            console.log(menu);
             const menuTabsInformation =[];
             const menuTabs = [];
             const slidePhotos = []
@@ -36,7 +35,7 @@ window.addEventListener('DOMContentLoaded',()=>{
                 
             tabs(menuTabsInformation,menuTabs);
             calculator();
-            modal();
+            modal(httpReq);
             timer();
             slider(slidePhotos);
         })

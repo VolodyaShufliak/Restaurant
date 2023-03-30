@@ -1,4 +1,4 @@
-function modal(){
+function modal(httpReq){
     //modal window
     const btnModalTrigger=document.querySelectorAll('[data-modal]');
     const modal=document.querySelector('.modal');
@@ -28,6 +28,55 @@ function modal(){
         })
     })
 
+    //db
+    let submit=modal.querySelector('form');
+    //console.log(submit);
+    bindPostData(submit);
+
+    function bindPostData(form){
+    form.addEventListener('submit',(event)=>{
+        event.preventDefault();
+        // const request=new XMLHttpRequest();
+        // request.open('POST','server.php');
+        const formData=new FormData(form);
+        //request.send(formData);
+        //showThanksModal('Hi');
+        // request.addEventListener('load',()=>{
+        //     if(request.status==200){
+        //         console.log(request.response);
+        //     }
+        // })
+        let jsonFormData=JSON.stringify(Object.fromEntries(formData.entries())) ;
+        httpReq('http://localhost:3000/requests','POST',jsonFormData)
+            .then(data=>{
+                showThanksModal('Дякуєм за замовлення!!!');
+                console.log(data)});
+    })
+    }
+
+    function showThanksModal(message) {
+        const prevModalDialog = document.querySelector('.modal__dialog');
+
+        prevModalDialog.classList.add('hide');
+        showModalWindow();
+
+        const thanksModal = document.createElement('div');
+        thanksModal.classList.add('modal__dialog');
+        thanksModal.innerHTML = `
+            <div class="modal__content">
+                <div class="modal__close" data-close>×</div>
+                <div class="modal__title">${message}</div>
+            </div>
+        `;
+        document.querySelector('.modal').append(thanksModal);
+        setTimeout(() => {
+            thanksModal.remove();
+            prevModalDialog.classList.add('show');
+            prevModalDialog.classList.remove('hide');
+            closeModalWindow();
+        }, 4000);
+        
+    }
     
 }
 module.exports = modal;
