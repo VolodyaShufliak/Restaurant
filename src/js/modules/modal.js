@@ -30,27 +30,16 @@ function modal(httpReq){
 
     //db
     let submit=modal.querySelector('form');
-    //console.log(submit);
     bindPostData(submit);
 
     function bindPostData(form){
     form.addEventListener('submit',(event)=>{
         event.preventDefault();
-        // const request=new XMLHttpRequest();
-        // request.open('POST','server.php');
         const formData=new FormData(form);
-        //request.send(formData);
-        //showThanksModal('Hi');
-        // request.addEventListener('load',()=>{
-        //     if(request.status==200){
-        //         console.log(request.response);
-        //     }
-        // })
         let jsonFormData=JSON.stringify(Object.fromEntries(formData.entries())) ;
         httpReq('http://localhost:3000/requests','POST',jsonFormData)
             .then(data=>{
-                showThanksModal('Дякуєм за замовлення!!!');
-                console.log(data)});
+                showThanksModal('Дякуєм за замовлення!!!');});
     })
     }
 
